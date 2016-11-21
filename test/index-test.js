@@ -1,9 +1,11 @@
+import 'webpack'
 import expect from 'expect';
 import { addMovie, deleteMovie, updateUsername, resetUsername} from '../src/actions';
 
 describe('movie actions', function() {
   describe('adding a movie', function(){
     it('returns the add movies action', function() {
+      
       let movie = {title: 'Ghostbusters', year: 2016}
       let action = addMovie(movie);
       expect(action.type).toEqual('ADD_MOVIE');
